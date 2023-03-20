@@ -1,0 +1,31 @@
+.sample2-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+
+input {
+    height: 50px;
+    width: 320px; 
+    outline: none;
+    border: 2px solid #000;
+    border-radius: 6px;
+    padding: 0px 10px;
+    font-size: 13px
+  }
+  input.is-invalid {
+    border: 2px solid red;
+    animation: shake 300ms
+  }
+  @keyframes shake {
+    25% {
+        transform: translateX(4px)
+    }
+    50% {
+        transform: translateX(-4px)
+    }
+    75% {
+        transform: translateX(4px)
+    }
+  }

@@ -1,6 +1,7 @@
 import { Component} from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { trigger, state, style, animate, transition } from '@angular/animations';
+import { trigger, state, style, animate, transition, useAnimation } from '@angular/animations';
+import { shake } from 'ngx-animate';
 
 // const shakeAnimation =trigger('shake',[
 //   state('initial',style({transform:'translateX(0)'})),
@@ -16,16 +17,15 @@ const shakeAnimation =trigger('shakeAnimation',[
     transform:'translateX(0px)',
     borderColor:'red'
   })),
-
+  
   transition('* => invalid', [
     animate('0.1s', style({ transform: 'translateX(10px)', borderColor:'red' })),
     animate('0.1s', style({ transform: 'translateX(-10px)', borderColor:'red' })),
     animate('0.1s', style({ transform: 'translateX(0px)', borderColor:'red'}))
   ]),
+  transition('* <=> invalid', useAnimation(shake)),
  
   // transition('* => valid', animate('0.10s', style())),
-
-
 ])
 
 const shakeAnimationPassword =trigger('shakeAnimationPassword',[
@@ -70,14 +70,16 @@ export class Sample2Component {
   get f() { return this.registerForm.controls; }
   
   
-  onSubmit() {
-    // this.submitted = true;
-    // stop here if form is invalid
+  onSubmit(event:any) {
+    // this.submitted = !this.submitted;
+    
+    
+    console.log(event)
     if (this.registerForm.invalid) {
-      this.submitted = true;
-        return;
-    }else{
       this.submitted = false;
+        
+    }else{
+      this.submitted = true;
     }
     //True if all the fields are filled
     if(this.submitted)

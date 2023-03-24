@@ -1,13 +1,14 @@
 <div class="sample2-container">
-    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit(!f.email.errors)">
         <div class="form-group mb-3">
             <input id="inputEmail" type="email" formControlName="email"
-            [@shakeAnimation]="submitted && f.email.errors?'invalid':'valid'"
+            [@shakeAnimation]="submitted && !registerForm.controls.email.errors?'valid':'invalid'"
+            
                placeholder="Email address"
                 required=""
                 autofocus=""
                 class="">
-            <div *ngIf="submitted && f.email.errors" >
+            <div *ngIf="submitted && !registerForm.controls.email.errors" >
                 <!-- <div *ngIf="f.email.errors.required">Email is required</div> -->
                 <div *ngIf="f.email.errors.required">Email is required</div>
                 <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
@@ -27,4 +28,3 @@
        </div>
     </form>
 </div>
-

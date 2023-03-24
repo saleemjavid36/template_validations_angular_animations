@@ -10,6 +10,14 @@ import { FormsModule } from '@angular/forms';
 import { Sample2Component } from './sample2/sample2.component';
 
 import { ReactiveFormsModule } from '@angular/forms';
+import { Sample1Component } from './sample1/sample1.component';
+import {MatGridListModule} from '@angular/material/grid-list';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import { MatchPasswordDirective } from './directives/match-password.directive';
+
+
+
 
 
 
@@ -17,6 +25,11 @@ import { ReactiveFormsModule } from '@angular/forms';
   declarations: [
     AppComponent,
     Sample2Component,
+    Sample1Component,
+    MatchPasswordDirective,
+    
+
+
 
   ],
   imports: [
@@ -24,7 +37,10 @@ import { ReactiveFormsModule } from '@angular/forms';
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatGridListModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

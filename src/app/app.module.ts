@@ -15,8 +15,10 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import { MatchPasswordDirective } from './directives/match-password.directive';
-
-
+import { SpinnerComponent } from './spinner/spinner.component';
+import { IndicatorsModule } from '@progress/kendo-angular-indicators';
+import { ButtonsModule } from "@progress/kendo-angular-buttons";
+import { LoaderDirective } from './vf-components/loader.directive';
 
 
 
@@ -27,9 +29,8 @@ import { MatchPasswordDirective } from './directives/match-password.directive';
     Sample2Component,
     Sample1Component,
     MatchPasswordDirective,
-    
-
-
+    SpinnerComponent,
+    LoaderDirective,
 
   ],
   imports: [
@@ -40,7 +41,9 @@ import { MatchPasswordDirective } from './directives/match-password.directive';
     ReactiveFormsModule,
     MatGridListModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    IndicatorsModule,
+    ButtonsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

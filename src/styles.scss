@@ -2,3 +2,31 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+
+.k-button .k-loader {
+    margin-right: 8px;
+  }
+
+
+  .wrap {
+    display: flex;
+    align-items: center;
+    margin: 0 -10px;
+  }
+  .example-item {
+    flex: 0 0 33%;
+    padding: 10px;
+  }
+  .example-item-title {
+    margin-bottom: 10px;
+    font-size: 90%;
+    font-style: italic;
+  }
+  .k-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 80px;
+  }

@@ -24,7 +24,6 @@ const shakeAnimation =trigger('shakeAnimation',[
     animate('0.1s', style({ transform: 'translateX(0px)', borderColor:'red'}))
   ]),
   transition('* <=> invalid', useAnimation(shake)),
- 
   // transition('* => valid', animate('0.10s', style())),
 ])
 

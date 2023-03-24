@@ -5,6 +5,12 @@ import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
 
+import {
+  LoaderType,
+  LoaderThemeColor,
+  LoaderSize,
+} from "@progress/kendo-angular-indicators";
+
 const shakeAnimation = trigger('shakeAnimation', [
   state('invalid', style({
     transform: 'translateX(0px)',
@@ -46,16 +52,15 @@ const shakeAnimationPassword =trigger('shakeAnimationPassword',[
 ])
 
 @Component({
-  selector: 'app-sample1',
-  templateUrl: './sample1.component.html',
-  // animations:[shakeAnimation,shakeAnimationPassword],
+  selector: 'app-spinner',
+  templateUrl: './spinner.component.html',
   animations:[shakeAnimation],
-  styleUrls: ['./sample1.component.scss']
+  styleUrls: ['./spinner.component.scss']
 })
-
-export class Sample1Component {
-  
+export class SpinnerComponent {
   valid:boolean=false;
+  public loaderVisible = false;
+  public buttonText = "Show Loader";
   
 
   form = {
@@ -86,12 +91,12 @@ export class Sample1Component {
   onReset(form: NgForm): void {
     form.reset();
   }
+
+  public onButtonClick(): void {
+    this.loaderVisible = !this.loaderVisible;
+    if (this.loaderVisible){
+      // alert("SuccessFUlly adde")
+    }
+  }
+
 }
-
-
-  // trigger('shake',[
-  //   state('true', style({})),
-  //   state('false', style({})),
-  //   transition('* => true', useAnimation(shake)),
-    
-  // ])

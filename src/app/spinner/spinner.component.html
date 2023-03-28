@@ -1,3 +1,9 @@
+<!-- <div class="expiremental-element">
+  <div loader ></div>
+  <vf-spinner></vf-spinner>
+ </div> -->
+
+
 <div class="sample1-container">
     <div class="register-form">
       <form
@@ -7,8 +13,6 @@
         novalidate
         [appMatchPassword]="['password', 'confirmPassword']"
       >
-  
-  
         <div class="form-group">
           <label>Full Name</label>
           <input
@@ -145,8 +149,13 @@
   
         <div class="form-group">
         
-        <button loader
-            kendoButton (click)="onButtonClick()"
+        <button 
+            kendoButton 
+            (click)="onButtonClick()"
+            
+            Diasabled  
+            [loaderVisible]="loaderVisible"
+
             type="submit" 
             class="btn btn-primary registen-button"
             >
@@ -164,20 +173,14 @@
         
         </div>
       </form>
+   
     </div>
-  
+
+    
+    
+    
   </div>
   
 
-  
-
-  <div  color="red">
-
-    <h1>saleem</h1>
-    <h1 >saleem</h1>
-    <h1>saleem</h1>
-    <h1>saleem</h1>
-    <h1>saleem</h1>
-  </div>
-
-  <vf-spinner></vf-spinner>
+ 
+ 

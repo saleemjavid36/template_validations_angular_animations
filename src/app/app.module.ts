@@ -19,6 +19,10 @@ import { SpinnerComponent } from './spinner/spinner.component';
 import { IndicatorsModule } from '@progress/kendo-angular-indicators';
 import { ButtonsModule } from "@progress/kendo-angular-buttons";
 import { LoaderDirective } from './vf-components/loader.directive';
+import { VfSpinnerComponent } from './vf-components/vf-spinner/vf-spinner.component';
+import { DiasabledDirective } from './vf-components/diasabled.directive';
+
+
 
 
 
@@ -31,7 +35,8 @@ import { LoaderDirective } from './vf-components/loader.directive';
     MatchPasswordDirective,
     SpinnerComponent,
     LoaderDirective,
-
+    VfSpinnerComponent,
+    DiasabledDirective,
   ],
   imports: [
     BrowserModule,
@@ -43,7 +48,8 @@ import { LoaderDirective } from './vf-components/loader.directive';
     MatFormFieldModule,
     MatInputModule,
     IndicatorsModule,
-    ButtonsModule
+    ButtonsModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

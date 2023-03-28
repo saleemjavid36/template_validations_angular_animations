@@ -1,5 +1,5 @@
 import { trigger, state, style, transition, animate, useAnimation } from '@angular/animations';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 // import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 import { NgForm } from '@angular/forms';
@@ -57,11 +57,27 @@ const shakeAnimationPassword =trigger('shakeAnimationPassword',[
   animations:[shakeAnimation],
   styleUrls: ['./spinner.component.scss']
 })
-export class SpinnerComponent {
-  valid:boolean=false;
-  public loaderVisible = false;
-  public buttonText = "Show Loader";
+export class SpinnerComponent implements OnInit {
   
+  valid:boolean=false;
+
+   // public loaderVisible = true;
+   loaderVisible = true;
+
+   constructor(){
+    
+   }
+
+
+   ngOnInit(){
+    this.timeout()
+   }
+
+   timeout(){
+    setTimeout(()=>{
+       this.loaderVisible=false
+    }, 2000);
+  }
 
   form = {
     fullname: '',
@@ -73,30 +89,29 @@ export class SpinnerComponent {
   };
   
   onSubmit(event:any): void {
-    console.log(JSON.stringify(this.form, null, 2));
+  //  console.log(JSON.stringify(this.form, null, 2));
 
     if (event.valid) {
-     console.log(event.status)
      this.valid=true
     } else {
-      console.log(event.status)
-      console.log(event)
       this.valid=false
       setTimeout(() => {
         this.valid=true
       }, 400);
     }
   }
-
+   
+ 
+  
+// ngDoCheck(){
+//   console.log(this.loaderVisible)
+// }
   onReset(form: NgForm): void {
     form.reset();
   }
 
   public onButtonClick(): void {
     this.loaderVisible = !this.loaderVisible;
-    if (this.loaderVisible){
-      // alert("SuccessFUlly adde")
-    }
   }
 
 }

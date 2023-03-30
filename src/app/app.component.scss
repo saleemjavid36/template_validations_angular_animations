@@ -1,0 +1,13 @@
+.home-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    height: 50vh;
+}
+.dropdown{
+    margin-right: 15px;
+}
+kendo-dropdownlist {
+    width: 170px;
+  }

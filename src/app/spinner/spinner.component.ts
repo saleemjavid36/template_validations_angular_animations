@@ -60,9 +60,10 @@ const shakeAnimationPassword =trigger('shakeAnimationPassword',[
 export class SpinnerComponent implements OnInit {
   
   valid:boolean=false;
+  loaderVisible = true;
+  disabled = true;
 
    // public loaderVisible = true;
-   loaderVisible = true;
 
    constructor(){
     
@@ -76,6 +77,7 @@ export class SpinnerComponent implements OnInit {
    timeout(){
     setTimeout(()=>{
        this.loaderVisible=false
+       this.disabled=false
     }, 2000);
   }
 
@@ -106,12 +108,14 @@ export class SpinnerComponent implements OnInit {
 // ngDoCheck(){
 //   console.log(this.loaderVisible)
 // }
+
   onReset(form: NgForm): void {
     form.reset();
   }
 
   public onButtonClick(): void {
     this.loaderVisible = !this.loaderVisible;
+    this.disabled = !this.disabled;
   }
 
 }

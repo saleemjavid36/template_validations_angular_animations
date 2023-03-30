@@ -49,11 +49,24 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     content: "";
     height: 20px;
     width: 20px;
-    position: absolute;
-    top: 10%;
-    left: 10%;
+
+  // position: absolute;
+  box-sizing: border-box;
     transform: translate3d(-50%, -50%, 0);
     will-change: transform;
-    margin-top: 15px;
-    margin-left: 15px;
+    display: block ;
+    // margi: 15px;
+    // margin-left: 15px;
+    // top: 15%;
+    // left: 10%;
   }
+
+
+  .loaderKendo{
+    // display: block;
+    // position: relative;
+    // justify-content: flex-end;
+    // background-color: blue !important;
+    // box-sizing: border-box;
+  }
+  

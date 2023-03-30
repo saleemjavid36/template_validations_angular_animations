@@ -18,11 +18,11 @@ import { MatchPasswordDirective } from './directives/match-password.directive';
 import { SpinnerComponent } from './spinner/spinner.component';
 import { IndicatorsModule } from '@progress/kendo-angular-indicators';
 import { ButtonsModule } from "@progress/kendo-angular-buttons";
-import { LoaderDirective } from './vf-components/loader.directive';
 import { VfSpinnerComponent } from './vf-components/vf-spinner/vf-spinner.component';
 import { DiasabledDirective } from './vf-components/diasabled.directive';
-
-
+import { DropdownModule } from 'primeng/dropdown';
+import { StructuralLoaderDirective } from './vf-components/structural-loader.directive';
+import { DropDownsModule } from '@progress/kendo-angular-dropdowns';
 
 
 
@@ -34,9 +34,9 @@ import { DiasabledDirective } from './vf-components/diasabled.directive';
     Sample1Component,
     MatchPasswordDirective,
     SpinnerComponent,
-    LoaderDirective,
     VfSpinnerComponent,
     DiasabledDirective,
+    StructuralLoaderDirective,
   ],
   imports: [
     BrowserModule,
@@ -49,7 +49,8 @@ import { DiasabledDirective } from './vf-components/diasabled.directive';
     MatInputModule,
     IndicatorsModule,
     ButtonsModule,
-    
+    DropdownModule,
+    DropDownsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

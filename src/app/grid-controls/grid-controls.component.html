@@ -1,0 +1,32 @@
+
+     
+ <div class="close-button"  >
+    <button (click)="moveOnPreviousRecord()"><span class="k-icon k-i-arrow-up"></span></button>
+    <button (click)="moveOnNextRecord()" ><span class="k-icon k-i-arrow-down"></span></button>
+    <button (click)="closeComponent()"><span class="k-icon k-i-close"></span></button>
+  </div> 
+     <div class=" form-group" >
+    <kendo-label class="k-form" text="UserId" ><kendo-textbox   [style.width.px]="300"  [style.height.px]="40" [value]="id" ></kendo-textbox> </kendo-label><br/>
+  <kendo-label class="k-form" text="FirstName" > <kendo-textbox   [style.width.px]="300" [style.height.px]="40" [value]="firstname" > </kendo-textbox></kendo-label>
+  <kendo-label class="k-form" text="LastName"> <kendo-textbox   [style.width.px]="300" [style.height.px]="40" [value]="lastname"  >  </kendo-textbox></kendo-label>
+  <kendo-label class="k-form" text="Address" ><kendo-textbox   [style.width.px]="300" [style.height.px]="40" [value]="address" >  </kendo-textbox></kendo-label>
+</div>
+
+  <!-- <div class=" col-sm-6 form-group">
+    <label for="userId" >UserId</label><input  class="form-control"  [value]="id" >
+  </div>
+  <div class=" col-sm-6 form-group">
+    <label for="firstname">FirstName</label>
+    <input  class=" form-control"  [value]="firstname" >
+  </div>
+
+
+  <div class=" col-sm-6 form-group">
+    <label for="lastname">LastName</label>
+    <input  class="form-control"   [value]="lastname" >
+  </div>
+  <div class=" col-sm-6 form-group">
+    <label for="Address">Address</label>
+    <input class="form-control"   [value]="address">
+  </div>
+  -->

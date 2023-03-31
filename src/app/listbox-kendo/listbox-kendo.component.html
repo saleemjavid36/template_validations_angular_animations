@@ -1,0 +1,27 @@
+
+<!-- <kendo-listbox
+      kendoListBoxDataBinding
+      [data]="europeanCountries"
+      [connectedWith]="asia"
+    >
+    </kendo-listbox>
+    <kendo-listbox #asia [data]="asianCountries" [toolbar]="false">
+</kendo-listbox> -->.
+
+
+<kendo-listbox   id="list-box1"  
+kendoListBoxDataBinding
+[data]="europeanCountries"
+[size]=" Size"  [toolbar]="ListBoxToolbarConfig" (actionClick)="SendDataToList($event,checklist)">
+
+<ng-template  kendoListBoxItemTemplate let-checkbox >
+ <input type="checkbox"  kendoCheckBox   (change)="MoveToNext(checkbox)"  />{{dataItem(checkbox)}}
+</ng-template>
+</kendo-listbox>
+
+
+<kendo-listbox   [size]=" Size" id="list-box2"   [data]="checkedItems" [toolbar]="false" > 
+<ng-template kendoListBoxItemTemplate let-checkbox>
+ <input type="checkbox"   kendoCheckBox (change)=" MoveToPreviousList(checkbox)" />{{DataItem(checkbox)}}
+</ng-template>
+</kendo-listbox>  

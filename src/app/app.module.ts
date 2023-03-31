@@ -23,7 +23,15 @@ import { DiasabledDirective } from './vf-components/diasabled.directive';
 import { DropdownModule } from 'primeng/dropdown';
 import { StructuralLoaderDirective } from './vf-components/structural-loader.directive';
 import { DropDownsModule } from '@progress/kendo-angular-dropdowns';
+import { ListboxKendoComponent } from './listbox-kendo/listbox-kendo.component';
+import { ListBoxModule } from "@progress/kendo-angular-listbox";
+import { GridKendoComponent } from './grid-kendo/grid-kendo.component';
+import { GridModule } from '@progress/kendo-angular-grid';
 
+import { LayoutModule } from '@progress/kendo-angular-layout';
+import { LabelModule } from '@progress/kendo-angular-label';
+import { InputsModule } from '@progress/kendo-angular-inputs';
+import { GridControlsComponent } from './grid-controls/grid-controls.component';
 
 
 
@@ -37,6 +45,9 @@ import { DropDownsModule } from '@progress/kendo-angular-dropdowns';
     VfSpinnerComponent,
     DiasabledDirective,
     StructuralLoaderDirective,
+    ListboxKendoComponent,
+    GridKendoComponent,
+    GridControlsComponent
   ],
   imports: [
     BrowserModule,
@@ -50,7 +61,12 @@ import { DropDownsModule } from '@progress/kendo-angular-dropdowns';
     IndicatorsModule,
     ButtonsModule,
     DropdownModule,
-    DropDownsModule
+    DropDownsModule,
+    ListBoxModule,
+    GridModule,
+    LabelModule,
+    InputsModule,
+    LayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]

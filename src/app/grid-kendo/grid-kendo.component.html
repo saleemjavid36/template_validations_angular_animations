@@ -1,0 +1,27 @@
+<kendo-expansionpanel id="panel" [expanded]="true" > 
+    <!-- <button (click)="getName()">Get Name of User</button>{{FirstName}} -->
+  
+  <kendo-grid class="row justify-content-center"  [ngClass]="isHeight===true?'fullSize':'short'" 
+  [data]="gridData" [pageable]=true [pageSize]="5"  (cellClick)="cellClickHandler($event)" >
+    <kendo-grid-column field="ID" title="UserID"  > 
+      <!-- <ng-template kendoGridCellTemplate let-dataItem>
+        <a href="#" (click)="cellClickHandler(dataItem)" class="alert-link">{{dataItem.ID}}</a>
+    </ng-template>   -->
+     </kendo-grid-column>
+    <kendo-grid-column field="FirstName" title="First Name"></kendo-grid-column>
+    <kendo-grid-column field="LastName" title="Last Name"> </kendo-grid-column>
+    <kendo-grid-column field="Address" title="Address"> </kendo-grid-column>
+  </kendo-grid>
+  
+  <div class=" justify-content-center" *ngIf="opened" >
+      <app-grid-controls [selectedData]="selected" (isHeight)="ReSize()"  (rowselect)="changeSelection($event)" ></app-grid-controls>
+  </div>
+  
+   </kendo-expansionpanel>  
+  
+  
+  
+  
+  
+  
+   
